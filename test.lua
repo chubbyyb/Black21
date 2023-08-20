@@ -7,14 +7,14 @@ dealerScore = 0
 playersHand = {}
 playerScore = 0
 
-for i = 0, 51 do
+for i = 0, 52 do
     local value = values[i % 13 + 1]
     local suit = suits[math.floor(i / 13) + 1]
     --if value == 11 then
     --    value = 'Jack'
     --elseif value == 12 then
     --    value = 'Queen'
-    --elseif value == 13 then
+    --elseif value == 13 thenrrr
     --    value = 'King'
     --elseif value == 14 then
     --    value = 'Ace'
@@ -22,7 +22,10 @@ for i = 0, 51 do
     deck[i] = tostring(value) .. tostring(suit)
 end
 
-
+-- print entire deck
+for i = 0, 51 do
+    print(deck[i])
+end
 -- Dealers handed two cards
 table.insert(dealersHand, deck[math.random(1, 52)])
 table.insert(dealersHand, deck[math.random(1, 52)])
